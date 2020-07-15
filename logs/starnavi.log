@@ -1,0 +1,82 @@
+2020-07-14 16:46:17,136 ERROR: Exception on / [GET] [in /home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/andriy/my_projects/starnavi_jun/app/ui/main/routes.py", line 34, in index
+    return render_template('index.html', title='Home', form=form,
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/andriy/my_projects/starnavi_jun/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/andriy/my_projects/starnavi_jun/app/templates/base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/andriy/my_projects/starnavi_jun/app/templates/index.html", line 23, in block "content"
+    <a href="{{ url_for('like_action', post_id=post.id, action='like') }}">Like</a>
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 344, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'like_action' with values ['action', 'post_id']. Did you mean 'main.like_action' instead?
+2020-07-14 16:46:35,444 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:47:14,988 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:47:20,934 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:50:11,212 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:53:52,483 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:54:57,725 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:56:29,080 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:58:28,502 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 17:14:28,849 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 17:14:38,812 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 17:40:10,250 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 17:41:41,016 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 17:45:31,804 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 17:46:37,162 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:01:10,807 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:19:52,530 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:20:00,435 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:23:29,591 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:24:07,413 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:24:12,955 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:43:58,732 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-14 18:45:55,343 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 13:03:44,190 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 14:51:32,715 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 14:54:08,855 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:07:29,221 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:07:55,501 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:08:16,044 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:09:36,433 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:10:50,551 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:12:31,678 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:15:58,197 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:16:27,169 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:19:24,053 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:19:27,575 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:29:13,673 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]
+2020-07-15 15:29:21,542 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:62]

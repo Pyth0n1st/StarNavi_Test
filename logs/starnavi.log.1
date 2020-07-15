@@ -1,0 +1,95 @@
+2020-07-14 16:32:36,627 ERROR: Exception on /edit_profile [POST] [in /home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/andriy/my_projects/starnavi_jun/app/ui/main/routes.py", line 79, in edit_profile
+    return redirect(url_for('edit_profile'))
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 344, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2020-07-14 16:39:22,525 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:39:34,423 ERROR: Exception on /edit_profile [GET] [in /home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/andriy/my_projects/starnavi_jun/app/ui/main/routes.py", line 83, in edit_profile
+    return render_template('main.edit_profile.html', title='Edit Profile',
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: main.edit_profile.html
+2020-07-14 16:40:15,499 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:40:29,875 ERROR: Exception on /edit_profile [POST] [in /home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py:1758]
+Traceback (most recent call last):
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/andriy/my_projects/starnavi_jun/app/ui/main/routes.py", line 79, in edit_profile
+    return redirect(url_for('edit_profile'))
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/flask/helpers.py", line 344, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "/home/andriy/my_projects/starnavi_jun/venv/lib/python3.8/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'edit_profile'. Did you mean 'main.edit_profile' instead?
+2020-07-14 16:42:35,139 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
+2020-07-14 16:46:15,603 INFO: Starnavi [in /home/andriy/my_projects/starnavi_jun/app/__init__.py:59]
